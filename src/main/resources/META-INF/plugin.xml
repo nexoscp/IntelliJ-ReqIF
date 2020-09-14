@@ -1,0 +1,32 @@
+<idea-plugin>
+  <id>reqid</id>
+  <name>ReqIF</name>
+  <vendor email="bernd@dutkow.ski" url="https://github.com/nexoscp/">neXos</vendor>
+  <description>
+    <![CDATA[
+      <html>
+        Language, FileType and DOM-Integration of <a href="https://www.omg.org/spec/ReqIF/1.2">ReqIF</a>
+      </html>
+    ]]>
+  </description>
+  <change-notes>
+    <![CDATA[
+      <html>
+        <p>No changes yet ffffffffffffff f f f f f<p>
+      </html>
+    ]]>
+  </change-notes>
+  <depends>com.intellij.modules.platform</depends>
+  <extensions defaultExtensionNs="com.intellij">
+    <fileType name="ReqIF" implementationClass="nexos.intellij.reqif.FileType" fieldName="INSTANCE" language="ReqIF" extensions="reqif"/>
+    <fileEditorProvider implementation="nexos.intellij.reqif.FileEditorProvider" />
+    <lang.parserDefinition language="ReqIF" implementationClass="nexos.intellij.reqif.RParserDefinition"/>
+    <standardResource path="/reqif.xsd" url="http://www.omg.org/spec/ReqIF/20110401/reqif.xsd" />
+    <standardResource path="/driver.xsd" url="http://www.omg.org/spec/ReqIF/20110402/driver.xsd" />
+  </extensions>
+  <actions>
+    <action id="ReqIF.NewFile" class="nexos.intellij.reqif.NewFile" description="Create a new ReqIF File" text="ReqIF">
+      <add-to-group group-id="NewGroup" anchor="before" relative-to-action="NewFile"/>
+    </action>
+  </actions>
+</idea-plugin>
