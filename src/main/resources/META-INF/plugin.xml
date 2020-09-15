@@ -19,6 +19,7 @@
   <depends>com.intellij.modules.platform</depends>
   <extensions defaultExtensionNs="com.intellij">
     <fileType name="ReqIF" implementationClass="nexos.intellij.reqif.FileType" fieldName="INSTANCE" language="ReqIF" extensions="reqif"/>
+    <dom.fileMetaData implementation="nexos.intellij.reqif.dom.FileMetaData" />
     <fileEditorProvider implementation="nexos.intellij.reqif.FileEditorProvider" />
     <lang.parserDefinition language="ReqIF" implementationClass="nexos.intellij.reqif.RParserDefinition"/>
     <standardResource path="/reqif.xsd" url="http://www.omg.org/spec/ReqIF/20110401/reqif.xsd" />

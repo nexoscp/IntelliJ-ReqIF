@@ -45,3 +45,7 @@ intellij {
   version = "2020.2.1"
   downloadSources = true
 }
+
+sourceSets.findByName("main")?.java {
+  srcDir("src/gen/java")
+}
