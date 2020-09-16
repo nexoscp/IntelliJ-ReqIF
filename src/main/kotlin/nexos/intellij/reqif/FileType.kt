@@ -2,8 +2,9 @@ package nexos.intellij.reqif
 
 import com.intellij.icons.AllIcons
 import com.intellij.ide.highlighter.XmlLikeFileType
+import com.intellij.lang.xml.XMLLanguage
 
-class FileType: XmlLikeFileType(RLanguage.INSTANCE) {
+class FileType: XmlLikeFileType(XMLLanguage.INSTANCE) {
     companion object {
         val INSTANCE = FileType()
     }

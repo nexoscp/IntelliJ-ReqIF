@@ -6,6 +6,7 @@ package nexos.intellij.reqif.model;
 import com.intellij.util.xml.DomElement;
 import com.intellij.util.xml.GenericDomValue;
 import com.intellij.util.xml.Required;
+import com.intellij.util.xml.SubTag;
 import org.jetbrains.annotations.NotNull;
 
 /**
@@ -27,6 +28,7 @@ public interface REQIFHEADER extends DomElement {
 	 */
 	@NotNull
 	@Required
+	@SubTag("CREATION-TIME")
 	GenericDomValue<String> getCREATIONTIME();
 
 

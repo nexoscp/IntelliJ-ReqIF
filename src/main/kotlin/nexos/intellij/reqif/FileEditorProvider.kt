@@ -10,16 +10,13 @@ import com.intellij.util.xml.DomManager
 import nexos.intellij.reqif.ReqIF.ID
 import nexos.intellij.reqif.model.REQIF
 
-
 class FileEditorProvider : FileEditorProvider {
-    override fun accept(project: Project, file: VirtualFile): Boolean {
-        return file.fileType is FileType
-    }
+    override fun accept(project: Project, file: VirtualFile) = file.fileType is FileType
 
     override fun createEditor(project: Project, file: VirtualFile): FileEditor {
         val psiFile = PsiManager.getInstance(project).findFile(file)
         if (psiFile is XmlFile) {
-            val root= DomManager
+            val root = DomManager
                     .getDomManager(project)
                     .getFileElement(psiFile, REQIF::class.java)
                     ?.rootElement

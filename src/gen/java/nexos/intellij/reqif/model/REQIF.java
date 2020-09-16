@@ -3,14 +3,14 @@
 
 package nexos.intellij.reqif.model;
 
-import com.intellij.util.xml.DomElement;
-import com.intellij.util.xml.GenericAttributeValue;
-import com.intellij.util.xml.Required;
+import com.intellij.util.xml.*;
 import org.jetbrains.annotations.NotNull;
+//import com.intellij.util.xml.DefinesXml;
 
 /**
  * http://www.omg.org/spec/ReqIF/20110401/reqif.xsd:REQ-IF interface.
  */
+//@DefinesXml
 public interface REQIF extends DomElement {
 
 	/**
@@ -59,14 +59,17 @@ public interface REQIF extends DomElement {
 	 */
 	@NotNull
 	@Required
+	@SubTag("THE-HEADER")
 	THEHEADER getTHEHEADER();
 
 	/**
 	 * Returns the value of the CORE-CONTENT child.
 	 * @return the value of the CORE-CONTENT child.
 	 */
+
 	@NotNull
 	@Required
+	@SubTag("CORE-CONTENT")
 	CORECONTENT getCORECONTENT();
 
 
@@ -74,6 +77,6 @@ public interface REQIF extends DomElement {
 	 * Returns the value of the TOOL-EXTENSIONS child.
 	 * @return the value of the TOOL-EXTENSIONS child.
 	 */
-	@NotNull
-	TOOLEXTENSIONS getTOOLEXTENSIONS();
+//	@NotNull
+//	TOOLEXTENSIONS getTOOLEXTENSIONS();
 }

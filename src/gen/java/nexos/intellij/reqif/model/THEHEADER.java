@@ -5,6 +5,7 @@ package nexos.intellij.reqif.model;
 
 import com.intellij.util.xml.DomElement;
 import com.intellij.util.xml.Required;
+import com.intellij.util.xml.SubTag;
 import org.jetbrains.annotations.NotNull;
 
 /**
@@ -18,7 +19,6 @@ public interface THEHEADER extends DomElement {
 	 */
 	@NotNull
 	@Required
+	@SubTag("REQ-IF-HEADER")
 	REQIFHEADER getREQIFHEADER();
-
-
 }
