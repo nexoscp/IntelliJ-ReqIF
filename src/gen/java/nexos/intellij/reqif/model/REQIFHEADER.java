@@ -3,10 +3,7 @@
 
 package nexos.intellij.reqif.model;
 
-import com.intellij.util.xml.DomElement;
-import com.intellij.util.xml.GenericDomValue;
-import com.intellij.util.xml.Required;
-import com.intellij.util.xml.SubTag;
+import com.intellij.util.xml.*;
 import org.jetbrains.annotations.NotNull;
 
 /**
@@ -37,6 +34,7 @@ public interface REQIFHEADER extends DomElement {
 	 * @return the value of the REPOSITORY-ID child.
 	 */
 	@NotNull
+	@SubTag("REPOSITORY-ID")
 	GenericDomValue<String> getREPOSITORYID();
 
 
@@ -46,6 +44,7 @@ public interface REQIFHEADER extends DomElement {
 	 */
 	@NotNull
 	@Required
+	@SubTag("REQ-IF-TOOL-ID")
 	GenericDomValue<String> getREQIFTOOLID();
 
 
@@ -55,6 +54,7 @@ public interface REQIFHEADER extends DomElement {
 	 */
 	@NotNull
 	@Required
+	@SubTag("SOURCE-TOOL-ID")
 	GenericDomValue<String> getSOURCETOOLID();
 
 
@@ -66,5 +66,10 @@ public interface REQIFHEADER extends DomElement {
 	@Required
 	GenericDomValue<String> getTITLE();
 
-
+	/**
+	 * type: xsd:ID
+	 */
+	@NotNull
+	@Required
+	GenericAttributeValue<String> getIDENTIFIER();
 }

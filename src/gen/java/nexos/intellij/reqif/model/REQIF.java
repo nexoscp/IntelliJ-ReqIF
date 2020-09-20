@@ -3,7 +3,10 @@
 
 package nexos.intellij.reqif.model;
 
-import com.intellij.util.xml.*;
+import com.intellij.util.xml.DomElement;
+import com.intellij.util.xml.GenericAttributeValue;
+import com.intellij.util.xml.Required;
+import com.intellij.util.xml.SubTag;
 import org.jetbrains.annotations.NotNull;
 //import com.intellij.util.xml.DefinesXml;
 
