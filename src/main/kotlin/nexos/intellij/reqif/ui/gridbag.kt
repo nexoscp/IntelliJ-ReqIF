@@ -17,4 +17,4 @@ fun constraints(
         ipadx: Int = 0,
         ipady: Int = 0) = GridBagConstraints(gridx, gridy, gridwidth, gridheight, weightx, weighty, anchor, fill, insets, ipadx, ipady)
 
-fun insets(top:Int, left:Int, bottom:Int, right:Int) = Insets(top, left, bottom, right)
+fun insets(top:Int = 0, left:Int = 0, bottom:Int = 0, right:Int = 0) = Insets(top, left, bottom, right)
