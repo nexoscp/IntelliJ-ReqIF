@@ -4,18 +4,9 @@
   <vendor email="bernd@dutkow.ski" url="https://github.com/nexoscp/">neXos</vendor>
   <description>
     <![CDATA[
-      <html>
-        Language, FileType and DOM-Integration of <a href="https://www.omg.org/spec/ReqIF/1.2">ReqIF</a>
-      </html>
+      Graphical user interface, FileType and DOM integration of <a href="https://www.omg.org/spec/ReqIF/1.2">ReqIF</a>
     ]]>
   </description>
-  <change-notes>
-    <![CDATA[
-      <html>
-        <p>No changes yet ffffffffffffff f f f f f<p>
-      </html>
-    ]]>
-  </change-notes>
   <depends>com.intellij.modules.platform</depends>
   <depends>com.intellij.modules.lang</depends>
   <extensions defaultExtensionNs="com.intellij">
