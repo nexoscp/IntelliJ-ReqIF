@@ -29,23 +29,28 @@ plugins {
 }
 
 tasks.withType<JavaCompile> {
-  sourceCompatibility = "1.8"
-  targetCompatibility = "1.8"
+  sourceCompatibility = "11"
+  targetCompatibility = "11"
 }
 
-// compile bytecode to java 8 (default is java 6)
+// compile bytecode to java 11 (default is java 6)
 tasks.withType<KotlinCompile> {
   kotlinOptions {
-    jvmTarget = "1.8"
+    jvmTarget = "11"
   //  freeCompilerArgs = listOf("-XXLanguage:+InlineClasses")
   }
 }
 
 intellij {
-  version = "2020.2.1"
+  version = "2020.2.2"
   downloadSources = true
 }
 
 sourceSets.findByName("main")?.java {
   srcDir("src/gen/java")
+}
+
+tasks.publishPlugin {
+  token(System.getenv("PUBLISH_TOKEN"))
+  channels(version.toString().split('-').getOrElse(1) { "default" }.split('.').first())
 }
