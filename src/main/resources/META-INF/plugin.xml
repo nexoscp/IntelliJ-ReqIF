@@ -17,12 +17,18 @@
     ]]>
   </change-notes>
   <depends>com.intellij.modules.platform</depends>
+  <depends>com.intellij.modules.lang</depends>
   <extensions defaultExtensionNs="com.intellij">
     <fileType name="ReqIF" implementationClass="nexos.intellij.reqif.FileType" language="XML" fieldName="INSTANCE" extensions="reqif"/>
     <dom.fileMetaData implementation="nexos.intellij.reqif.dom.FileMetaData" />
     <fileEditorProvider implementation="nexos.intellij.reqif.FileEditorProvider" />
     <standardResource path="/reqif.xsd" url="http://www.omg.org/spec/ReqIF/20110401/reqif.xsd" />
     <standardResource path="/driver.xsd" url="http://www.omg.org/spec/ReqIF/20110402/driver.xsd" />
+    <breadcrumbsInfoProvider implementation="nexos.intellij.reqif.Breadcrumbs" />
+    <searchScopesProvider implementation="nexos.intellij.reqif.Search" />
+  </extensions>
+  <extensions defaultExtensionNs="com.intellij.lang">
+   <psiStructureViewFactory language="XML" implementationClass="nexos.intellij.reqif.StructureViewFactory" />
   </extensions>
   <actions>
     <action id="ReqIF.NewFile" class="nexos.intellij.reqif.NewFile" description="Create a new ReqIF File" text="ReqIF">
